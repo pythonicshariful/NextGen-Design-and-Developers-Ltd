@@ -1,0 +1,115 @@
+{% extends 'admin/base.html' %}
+{% block title %}General Settings{% endblock %}
+{% block page_title %}General Settings{% endblock %}
+{% block page_subtitle %}Manage site name, logo, contact info and social links{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+  <!-- Site Identity -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header">
+      <h3><i class="fas fa-globe"></i> Site Identity</h3>
+    </div>
+    <div class="card-body">
+      <div class="form-row form-row-2">
+        <div class="form-group">
+          <label class="form-label">Site Name</label>
+          <input name="site_name" type="text" class="form-control" value="{{ current.site_name }}" placeholder="e.g. NextGen Design & Developers Ltd" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tagline</label>
+          <input name="site_tagline" type="text" class="form-control" value="{{ current.site_tagline }}" placeholder="e.g. Building Your Dreams"/>
+        </div>
+      </div>
+
+      <div class="form-row form-row-2">
+        <!-- Logo -->
+        <div class="form-group">
+          <label class="form-label">Logo <span>(upload or enter URL)</span></label>
+          {% if current.logo_url %}
+            <img src="{{ current.logo_url }}" id="logo-preview" class="img-preview" style="display:block;margin-bottom:10px;max-height:50px;width:auto;object-fit:contain;background:#fff;padding:4px;border-radius:6px;"/>
+          {% else %}
+            <img id="logo-preview" class="img-preview" style="display:none;"/>
+          {% endif %}
+          <label class="upload-area">
+            <input type="file" name="logo_file" accept="image/*" data-preview="logo-preview"/>
+            <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <p>Click to upload logo <strong>or</strong></p>
+          </label>
+          <input name="logo_url" type="text" class="form-control" value="{{ current.logo_url }}" placeholder="/assets/images/logo.svg" style="margin-top:8px;"/>
+        </div>
+        <!-- Favicon -->
+        <div class="form-group">
+          <label class="form-label">Favicon <span>(upload or enter URL)</span></label>
+          {% if current.favicon_url %}
+            <img src="{{ current.favicon_url }}" id="fav-preview" class="img-preview" style="display:block;margin-bottom:10px;width:32px;height:32px;"/>
+          {% else %}
+            <img id="fav-preview" class="img-preview" style="display:none;"/>
+          {% endif %}
+          <label class="upload-area">
+            <input type="file" name="favicon_file" accept="image/*" data-preview="fav-preview"/>
+            <div class="upload-icon"><i class="fas fa-image"></i></div>
+            <p>Click to upload favicon <strong>or</strong></p>
+          </label>
+          <input name="favicon_url" type="text" class="form-control" value="{{ current.favicon_url }}" placeholder="/assets/images/fav.png" style="margin-top:8px;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header"><h3><i class="fas fa-address-card"></i> Contact Information</h3></div>
+    <div class="card-body">
+      <div class="form-row form-row-2">
+        <div class="form-group">
+          <label class="form-label">Phone</label>
+          <input name="phone" type="text" class="form-control" value="{{ current.phone }}" placeholder="+880 1234-567890"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input name="email" type="email" class="form-control" value="{{ current.email }}" placeholder="info@nddl.com"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Address</label>
+        <input name="address" type="text" class="form-control" value="{{ current.address }}" placeholder="Dhaka, Bangladesh"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Footer About Text</label>
+        <textarea name="footer_about" class="form-control" rows="3" placeholder="Short description shown in footer...">{{ current.footer_about }}</textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Media -->
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header"><h3><i class="fas fa-share-alt"></i> Social Media Links</h3></div>
+    <div class="card-body">
+      <div class="form-row form-row-2">
+        <div class="form-group">
+          <label class="form-label"><i class="fab fa-facebook" style="color:#1877f2;"></i> Facebook URL</label>
+          <input name="facebook_url" type="url" class="form-control" value="{{ current.facebook_url }}" placeholder="https://facebook.com/yourpage"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label"><i class="fab fa-instagram" style="color:#e1306c;"></i> Instagram URL</label>
+          <input name="instagram_url" type="url" class="form-control" value="{{ current.instagram_url }}" placeholder="https://instagram.com/yourpage"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label"><i class="fab fa-linkedin" style="color:#0077b5;"></i> LinkedIn URL</label>
+          <input name="linkedin_url" type="url" class="form-control" value="{{ current.linkedin_url }}" placeholder="https://linkedin.com/company/yourpage"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label"><i class="fab fa-youtube" style="color:#ff0000;"></i> YouTube URL</label>
+          <input name="youtube_url" type="url" class="form-control" value="{{ current.youtube_url }}" placeholder="https://youtube.com/yourchannel"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;">
+    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save All Settings</button>
+    <a href="{{ url_for('admin_bp.dashboard') }}" class="btn btn-secondary"><i class="fas fa-times"></i> Cancel</a>
+  </div>
+</form>
+{% endblock %}

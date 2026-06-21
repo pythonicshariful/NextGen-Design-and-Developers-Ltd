@@ -1,0 +1,83 @@
+{% extends 'admin/base.html' %}
+{% block title %}{{ action }} Project{% endblock %}
+{% block page_title %}{{ action }} Project{% endblock %}
+{% block page_subtitle %}{% if item %}Editing: {{ item.name }}{% else %}Add a new property listing{% endif %}{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+  <div class="card">
+    <div class="card-header"><h3><i class="fas fa-building"></i> Project Details</h3></div>
+    <div class="card-body">
+      <div class="form-group">
+        <label class="form-label">Project Name <span>*</span></label>
+        <input name="name" type="text" class="form-control" value="{{ item.name if item else '' }}" required placeholder="e.g. Skyline Heights Residence"/>
+      </div>
+
+      <div class="form-row form-row-3">
+        <div class="form-group">
+          <label class="form-label">Location</label>
+          <input name="location" type="text" class="form-control" value="{{ item.location if item else '' }}" placeholder="e.g. Gulshan, Dhaka"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Property Type</label>
+          <select name="property_type" class="form-control">
+            {% set types = ['Residential', 'Commercial', 'Mixed Use', 'Land'] %}
+            {% for t in types %}
+              <option value="{{ t }}" {{ 'selected' if item and item.property_type == t }}>{{ t }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Status</label>
+          <select name="status" class="form-control">
+            {% for s in ['Ongoing', 'Completed', 'Upcoming', 'On Hold'] %}
+              <option value="{{ s }}" {{ 'selected' if item and item.status == s else ('selected' if not item and s == 'Ongoing' else '') }}>{{ s }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Description</label>
+        <textarea name="description" class="form-control" rows="3" placeholder="Short description of the project...">{{ item.description if item else '' }}</textarea>
+      </div>
+
+      <div class="form-row form-row-2">
+        <div class="form-group">
+          <label class="form-label">Display Order</label>
+          <input name="sort_order" type="number" class="form-control" value="{{ item.sort_order if item else 0 }}" min="0"/>
+          <p class="form-hint">Lower numbers appear first</p>
+        </div>
+        <div class="form-group" style="display:flex;align-items:center;padding-top:28px;">
+          <div class="toggle-wrap">
+            <input type="checkbox" name="is_active" id="is_active" {{ 'checked' if not item or item.is_active }}/>
+            <label class="toggle-label" for="is_active">Show on website</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="form-group">
+        <label class="form-label">Project Image</label>
+        {% if item and item.image_url %}
+          <img src="{{ item.image_url }}" id="proj-img-preview" class="img-preview" style="display:block;width:200px;height:130px;margin-bottom:10px;border-radius:8px;"/>
+        {% else %}
+          <img id="proj-img-preview" class="img-preview" style="display:none;width:200px;height:130px;margin-bottom:10px;border-radius:8px;"/>
+        {% endif %}
+        <label class="upload-area" style="margin-bottom:8px;">
+          <input type="file" name="image_file" accept="image/*" data-preview="proj-img-preview"/>
+          <div class="upload-icon"><i class="fas fa-image"></i></div>
+          <p>Upload project image <strong>or</strong> enter URL below</p>
+        </label>
+        <input name="image_url" type="text" class="form-control" value="{{ item.image_url if item else '' }}" placeholder="https://... or /uploads/project.jpg"/>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;margin-top:20px;">
+    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> {{ action }} Project</button>
+    <a href="{{ url_for('admin_bp.projects') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to List</a>
+  </div>
+</form>
+{% endblock %}

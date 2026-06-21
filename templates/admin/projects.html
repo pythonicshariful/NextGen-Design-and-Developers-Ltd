@@ -1,0 +1,115 @@
+{% extends 'admin/base.html' %}
+{% block title %}Projects{% endblock %}
+{% block page_title %}Projects{% endblock %}
+{% block page_subtitle %}Manage property listings shown on the website{% endblock %}
+
+{% block content %}
+<div style="display:flex;justify-content:flex-end;margin-bottom:16px;">
+  <a href="{{ url_for('admin_bp.project_new') }}" class="btn btn-primary">
+    <i class="fas fa-plus"></i> Add Project
+  </a>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h3><i class="fas fa-building"></i> All Projects <span style="color:var(--muted);font-weight:400;font-size:13px;">({{ items|length }} total)</span></h3>
+  </div>
+  {% if items %}
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Order</th>
+          <th>Project</th>
+          <th>Location</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Visible</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in items %}
+        <tr>
+          <td style="color:var(--muted);font-size:13px;">{{ p.sort_order }}</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:10px;">
+              {% if p.image_url %}
+                <img src="{{ p.image_url }}" class="img-preview" style="width:50px;height:40px;"/>
+              {% else %}
+                <div style="width:50px;height:40px;border-radius:6px;background:var(--surface3);display:flex;align-items:center;justify-content:center;color:var(--muted);flex-shrink:0;">
+                  <i class="fas fa-building"></i>
+                </div>
+              {% endif %}
+              <div>
+                <div style="font-weight:600;font-size:14px;">{{ p.name }}</div>
+                {% if p.description %}
+                  <div style="font-size:12px;color:var(--muted);">{{ p.description[:60] }}{% if p.description|length > 60 %}…{% endif %}</div>
+                {% endif %}
+              </div>
+            </div>
+          </td>
+          <td style="color:var(--muted);font-size:13px;">{{ p.location or '—' }}</td>
+          <td>
+            {% if p.property_type %}
+              <span class="badge badge-info">{{ p.property_type }}</span>
+            {% else %}<span style="color:var(--muted);">—</span>{% endif %}
+          </td>
+          <td>
+            <span class="badge {% if p.status == 'Completed' %}badge-success{% elif p.status == 'Ongoing' %}badge-warning{% else %}badge-muted{% endif %}">
+              {{ p.status or 'N/A' }}
+            </span>
+          </td>
+          <td>
+            <span class="badge {{ 'badge-success' if p.is_active else 'badge-muted' }}" id="badge-p-{{ p.id }}">
+              <i class="fas fa-circle" style="font-size:7px;"></i>
+              {{ 'Active' if p.is_active else 'Hidden' }}
+            </span>
+          </td>
+          <td>
+            <div style="display:flex;gap:6px;">
+              <a href="{{ url_for('admin_bp.project_edit', pid=p.id) }}" class="btn btn-secondary btn-sm btn-icon" title="Edit">
+                <i class="fas fa-edit"></i>
+              </a>
+              <button class="btn btn-secondary btn-sm btn-icon" title="Toggle" onclick="toggleProject({{ p.id }})">
+                <i class="fas {{ 'fa-eye-slash' if p.is_active else 'fa-eye' }}" id="icon-p-{{ p.id }}"></i>
+              </button>
+              <form method="POST" action="{{ url_for('admin_bp.project_delete', pid=p.id) }}" onsubmit="return confirm('Delete this project?');" style="display:inline;">
+                <button type="submit" class="btn btn-danger btn-sm btn-icon" title="Delete">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="card-body" style="text-align:center;padding:48px 24px;">
+    <div style="font-size:40px;color:var(--muted);margin-bottom:12px;"><i class="fas fa-building"></i></div>
+    <p style="color:var(--muted);font-size:15px;">No projects yet.</p>
+    <a href="{{ url_for('admin_bp.project_new') }}" class="btn btn-primary" style="margin-top:14px;">
+      <i class="fas fa-plus"></i> Add First Project
+    </a>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+function toggleProject(id) {
+  fetch(`/admin/projects/${id}/toggle`, {method:'POST'}).then(r=>r.json()).then(data=>{
+    const badge = document.getElementById(`badge-p-${id}`);
+    const icon  = document.getElementById(`icon-p-${id}`);
+    if (badge) {
+      badge.className = 'badge ' + (data.active ? 'badge-success' : 'badge-muted');
+      badge.innerHTML = `<i class="fas fa-circle" style="font-size:7px;"></i> ${data.active ? 'Active' : 'Hidden'}`;
+    }
+    if (icon) icon.className = data.active ? 'fas fa-eye-slash' : 'fas fa-eye';
+  });
+}
+</script>
+{% endblock %}

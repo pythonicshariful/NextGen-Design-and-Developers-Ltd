@@ -1,0 +1,81 @@
+{% extends 'admin/base.html' %}
+{% block title %}{{ action }} Testimonial{% endblock %}
+{% block page_title %}{{ action }} Testimonial{% endblock %}
+{% block page_subtitle %}{% if item %}Editing: {{ item.name }}{% else %}Add a new customer review{% endif %}{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+  <div class="card">
+    <div class="card-header">
+      <h3><i class="fas fa-user-circle"></i> Customer Information</h3>
+    </div>
+    <div class="card-body">
+      <div class="form-row form-row-3">
+        <div class="form-group">
+          <label class="form-label">Customer Name <span>*</span></label>
+          <input name="name" type="text" class="form-control" value="{{ item.name if item else '' }}" required placeholder="e.g. Rahim Uddin"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Position / Designation</label>
+          <input name="position" type="text" class="form-control" value="{{ item.position if item else '' }}" placeholder="e.g. Business Owner"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Company</label>
+          <input name="company" type="text" class="form-control" value="{{ item.company if item else '' }}" placeholder="e.g. ABC Ltd"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Review / Quote <span>*</span></label>
+        <textarea name="quote" class="form-control" rows="4" required placeholder="Enter the customer's review or testimonial text...">{{ item.quote if item else '' }}</textarea>
+      </div>
+
+      <div class="form-row form-row-3">
+        <div class="form-group">
+          <label class="form-label">Star Rating</label>
+          <select name="rating" class="form-control">
+            {% for r in [5,4,3,2,1] %}
+              <option value="{{ r }}" {{ 'selected' if item and item.rating == r else ('selected' if not item and r == 5 else '') }}>
+                {{ r }} Star{% if r > 1 %}s{% endif %} ({{ '★' * r }})
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Display Order</label>
+          <input name="sort_order" type="number" class="form-control" value="{{ item.sort_order if item else 0 }}" min="0"/>
+          <p class="form-hint">Lower numbers appear first</p>
+        </div>
+        <div class="form-group" style="display:flex;align-items:center;padding-top:28px;">
+          <div class="toggle-wrap">
+            <input type="checkbox" name="is_active" id="is_active" {{ 'checked' if not item or item.is_active }}/>
+            <label class="toggle-label" for="is_active">Show on website</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="form-group">
+        <label class="form-label">Customer Photo <span>(optional)</span></label>
+        {% if item and item.image_url %}
+          <img src="{{ item.image_url }}" id="t-photo-preview" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid var(--border);display:block;margin-bottom:10px;"/>
+        {% else %}
+          <img id="t-photo-preview" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid var(--border);display:none;margin-bottom:10px;"/>
+        {% endif %}
+        <label class="upload-area" style="margin-bottom:8px;">
+          <input type="file" name="image_file" accept="image/*" data-preview="t-photo-preview"/>
+          <div class="upload-icon"><i class="fas fa-user-circle"></i></div>
+          <p>Upload photo <strong>or</strong> enter URL below</p>
+        </label>
+        <input name="image_url" type="text" class="form-control" value="{{ item.image_url if item else '' }}" placeholder="https://... or /uploads/photo.jpg"/>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;margin-top:20px;">
+    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> {{ action }} Testimonial</button>
+    <a href="{{ url_for('admin_bp.testimonials') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to List</a>
+  </div>
+</form>
+{% endblock %}

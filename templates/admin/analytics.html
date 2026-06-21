@@ -1,0 +1,75 @@
+{% extends 'admin/base.html' %}
+{% block title %}Analytics & Tracking{% endblock %}
+{% block page_title %}Analytics & Tracking{% endblock %}
+{% block page_subtitle %}Connect Google Analytics and Facebook Pixel{% endblock %}
+
+{% block content %}
+<form method="POST">
+  <!-- Google Analytics -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-header">
+      <h3><i class="fab fa-google" style="color:#4285f4;"></i> Google Analytics 4</h3>
+      {% if current.ga4_tracking_id %}
+        <span class="badge badge-success"><i class="fas fa-circle" style="font-size:7px;"></i> Active</span>
+      {% else %}
+        <span class="badge badge-muted">Not Set</span>
+      {% endif %}
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label class="form-label">Measurement ID</label>
+        <input name="ga4_tracking_id" type="text" class="form-control"
+               value="{{ current.ga4_tracking_id }}"
+               placeholder="G-XXXXXXXXXX" style="max-width:380px;"/>
+        <p class="form-hint">
+          Find this in your Google Analytics account → Admin → Data Streams → your stream → Measurement ID.
+          Starts with <strong>G-</strong>. Leave blank to disable.
+        </p>
+      </div>
+      {% if current.ga4_tracking_id %}
+      <div style="background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.2);border-radius:8px;padding:14px 16px;font-size:13px;color:#8b949e;margin-top:4px;">
+        <i class="fas fa-code" style="color:#60a5fa;margin-right:8px;"></i>
+        GA4 tag (<code style="color:#58a6ff;">{{ current.ga4_tracking_id }}</code>) is injected in every page's
+        <code>&lt;head&gt;</code> automatically.
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Facebook Pixel -->
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header">
+      <h3><i class="fab fa-facebook" style="color:#1877f2;"></i> Facebook Pixel</h3>
+      {% if current.fb_pixel_id %}
+        <span class="badge badge-success"><i class="fas fa-circle" style="font-size:7px;"></i> Active</span>
+      {% else %}
+        <span class="badge badge-muted">Not Set</span>
+      {% endif %}
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label class="form-label">Pixel ID</label>
+        <input name="fb_pixel_id" type="text" class="form-control"
+               value="{{ current.fb_pixel_id }}"
+               placeholder="123456789012345" style="max-width:380px;"/>
+        <p class="form-hint">
+          Find this in Facebook Events Manager → your Pixel → Settings → Pixel ID.
+          It's a 15–16 digit number. Leave blank to disable.
+        </p>
+      </div>
+      {% if current.fb_pixel_id %}
+      <div style="background:rgba(24,119,242,.08);border:1px solid rgba(24,119,242,.2);border-radius:8px;padding:14px 16px;font-size:13px;color:#8b949e;margin-top:4px;">
+        <i class="fas fa-code" style="color:#60a5fa;margin-right:8px;"></i>
+        Facebook Pixel (<code style="color:#58a6ff;">{{ current.fb_pixel_id }}</code>) base code is
+        injected on every page automatically.
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;">
+    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Analytics Settings</button>
+    <a href="{{ url_for('admin_bp.dashboard') }}" class="btn btn-secondary">Cancel</a>
+  </div>
+</form>
+{% endblock %}
