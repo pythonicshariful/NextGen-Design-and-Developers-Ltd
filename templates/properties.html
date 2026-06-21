@@ -807,18 +807,18 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 					<div class="footer-links text-center">
 						<ul class="">
-                            <li><a href="https://btibd.com/blog/">Blog</a></li>
-                            <li><a href="https://btibd.com/newsletter/">Newsletter</a></li>
-                            <li><a href="https://btibd.com/gallery/">Gallery</a></li>
-                            <li><a href="https://btibd.com/handed-over-projects/">Handed over projects</a></li>
-                            <li><a href="https://www.youtube.com/c/btibuildingtechnologyideasltd" target="_blank" rel="noopener">Video</a></li>
-                            <li><a href="https://btibd.com/career/">Career</a></li>
-                            <li><a href="https://btibd.com/privacy-policy/">Privacy policy</a></li>
+                                                        <li><a href="{{ settings.footer_blog_url or 'https://btibd.com/blog/' }}">Blog</a></li>
+                            <li><a href="{{ settings.footer_newsletter_url or 'https://btibd.com/newsletter/' }}">Newsletter</a></li>
+                            <li><a href="{{ settings.footer_gallery_url or 'https://btibd.com/gallery/' }}">Gallery</a></li>
+                            <li><a href="{{ settings.footer_handed_over_url or 'https://btibd.com/handed-over-projects/' }}">Handed over projects</a></li>
+                            <li><a href="{{ settings.footer_video_url or 'https://www.youtube.com/c/btibuildingtechnologyideasltd' }}" target="_blank" rel="noopener">Video</a></li>
+                            <li><a href="{{ settings.footer_career_url or 'https://btibd.com/career/' }}">Career</a></li>
+                            <li><a href="{{ settings.footer_privacy_url or 'https://btibd.com/privacy-policy/' }}">Privacy policy</a></li>
                         </ul>
 					</div>
 
-					<div class="details text-center">
-						<small class="text-light mb-0">bti Celebration Point, Plot: 3 & 5, Road: 113/A, Gulshan-2, Dhaka-1212</small>
+										<div class="details text-center">
+						<small class="text-light mb-0">{{ settings.footer_address or 'bti Celebration Point, Plot: 3 & 5, Road: 113/A, Gulshan-2, Dhaka-1212' }}</small>
 					</div>
 
 					<!-- <div class="th-widget-contact d-none d-xl-flex justify-content-center">
@@ -854,11 +854,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 						<a href="https://www.youtube.com/c/btibuildingtechnologyideasltd" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
 					</div>
 
-					<div class="copyright-wrap bg-theme">
+										<div class="copyright-wrap bg-theme">
 						<p class="copyright-text text-center">
-							Copyright <i class="fa-solid fa-copyright"></i> 2026 <a href="{{ url_for('index') }}">bti</a>,
-							All
-							rights reserved.</p>
+							{{ settings.copyright_text | safe if settings.copyright_text else 'Copyright <i class="fa-solid fa-copyright"></i> 2026 <a href="' + url_for('index') + '">bti</a>, All rights reserved.' | safe }}</p>
 					</div>
 
 					<!-- </div> -->

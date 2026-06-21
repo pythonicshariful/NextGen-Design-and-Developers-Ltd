@@ -210,6 +210,7 @@
     .form-row { display: grid; gap: 20px; }
     .form-row-2 { grid-template-columns: 1fr 1fr; }
     .form-row-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .form-row-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
 
     /* ── Toggle / Checkbox ──────────────────────────────────── */
     .toggle-wrap { display: flex; align-items: center; gap: 10px; }
@@ -381,7 +382,7 @@
       .sidebar { transform: translateX(-100%); }
       .sidebar.open { transform: translateX(0); }
       .main-wrapper { margin-left: 0; }
-      .form-row-2, .form-row-3 { grid-template-columns: 1fr; }
+      .form-row-2, .form-row-3, .form-row-4 { grid-template-columns: 1fr; }
     }
   </style>
   {% block extra_head %}{% endblock %}

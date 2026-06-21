@@ -75,6 +75,9 @@ def general():
         'site_name', 'site_tagline', 'logo_url', 'favicon_url',
         'phone', 'email', 'address', 'footer_about',
         'facebook_url', 'instagram_url', 'linkedin_url', 'youtube_url',
+        'footer_blog_url', 'footer_newsletter_url', 'footer_gallery_url',
+        'footer_handed_over_url', 'footer_video_url', 'footer_career_url',
+        'footer_privacy_url', 'copyright_text', 'footer_address',
     ]
     if request.method == 'POST':
         for key in settings_keys:
@@ -253,6 +256,7 @@ def projects():
 def project_new():
     if request.method == 'POST':
         img_url = save_upload('image_file') or request.form.get('image_url', '')
+        logo_url = save_upload('logo_file') or request.form.get('logo_url', '')
         p = Project(
             name=request.form['name'],
             location=request.form.get('location', ''),
@@ -260,6 +264,13 @@ def project_new():
             status=request.form.get('status', 'Ongoing'),
             description=request.form.get('description', ''),
             image_url=img_url,
+            tag=request.form.get('tag', 'Special Offer'),
+            logo_url=logo_url,
+            size=request.form.get('size', ''),
+            beds=request.form.get('beds', ''),
+            baths=request.form.get('baths', ''),
+            land=request.form.get('land', ''),
+            detail_url=request.form.get('detail_url', ''),
             sort_order=int(request.form.get('sort_order', 0)),
             is_active=request.form.get('is_active') == 'on',
         )
@@ -276,17 +287,28 @@ def project_edit(pid):
     p = Project.query.get_or_404(pid)
     if request.method == 'POST':
         img_url = save_upload('image_file')
+        logo_url = save_upload('logo_file')
         p.name = request.form['name']
         p.location = request.form.get('location', '')
         p.property_type = request.form.get('property_type', '')
         p.status = request.form.get('status', 'Ongoing')
         p.description = request.form.get('description', '')
+        p.tag = request.form.get('tag', 'Special Offer')
+        p.size = request.form.get('size', '')
+        p.beds = request.form.get('beds', '')
+        p.baths = request.form.get('baths', '')
+        p.land = request.form.get('land', '')
+        p.detail_url = request.form.get('detail_url', '')
         p.sort_order = int(request.form.get('sort_order', 0))
         p.is_active = request.form.get('is_active') == 'on'
         if img_url:
             p.image_url = img_url
         elif request.form.get('image_url'):
             p.image_url = request.form.get('image_url')
+        if logo_url:
+            p.logo_url = logo_url
+        elif request.form.get('logo_url'):
+            p.logo_url = request.form.get('logo_url')
         db.session.commit()
         flash('Project updated!', 'success')
         return redirect(url_for('admin_bp.projects'))

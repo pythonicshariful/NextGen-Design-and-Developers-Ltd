@@ -132,6 +132,15 @@ def _seed_defaults():
         'youtube_url':    '#',
         'ga4_tracking_id': '',
         'fb_pixel_id':    '',
+        'footer_blog_url': 'https://btibd.com/blog/',
+        'footer_newsletter_url': 'https://btibd.com/newsletter/',
+        'footer_gallery_url': 'https://btibd.com/gallery/',
+        'footer_handed_over_url': 'https://btibd.com/handed-over-projects/',
+        'footer_video_url': 'https://www.youtube.com/c/btibuildingtechnologyideasltd',
+        'footer_career_url': 'https://btibd.com/career/',
+        'footer_privacy_url': 'https://btibd.com/privacy-policy/',
+        'copyright_text': 'Copyright © 2026 bti, All rights reserved.',
+        'footer_address': 'bti Celebration Point, Plot: 3 & 5, Road: 113/A, Gulshan-2, Dhaka-1212',
     }
     for key, value in defaults.items():
         if not SiteSetting.query.filter_by(key=key).first():

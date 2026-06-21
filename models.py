@@ -94,9 +94,18 @@ class Project(db.Model):
     status = db.Column(db.String(100), default='Ongoing')
     image_url = db.Column(db.String(500), default='')
     description = db.Column(db.Text, default='')
+    # Extended fields for featured property cards
+    tag = db.Column(db.String(100), default='Special Offer')
+    logo_url = db.Column(db.String(500), default='')
+    size = db.Column(db.String(100), default='')
+    beds = db.Column(db.String(50), default='')
+    baths = db.Column(db.String(50), default='')
+    land = db.Column(db.String(100), default='')
+    detail_url = db.Column(db.String(500), default='')
     is_active = db.Column(db.Boolean, default=True)
     sort_order = db.Column(db.Integer, default=0)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
+        return f'<Project {self.name}>'
         return f'<Project {self.name}>'
