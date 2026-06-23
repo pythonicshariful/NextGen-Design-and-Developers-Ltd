@@ -148,6 +148,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <!-- AOS & Custom UI -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-ui.css') }}">
+    <script defer src="{{ url_for('static', filename='js/ui-enhance.js') }}"></script>
 
 </head>
 
@@ -235,7 +236,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <!-- <div class="widget  ">
                 <div class="th-widget-about">
                     <div class="about-logo">
-                        <a href="{{ url_for('index') }}"><img src="{{ settings.get('logo_url', '/assets/images/logo.png') }}"
+                        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/transparent-logo.webp', v=2) }}"
                                 alt="Side menu logo"></a>
                     </div>
                     <p class="about-text text-light"> Rapidiously myocardinate cross-platform intellectual capital
@@ -317,7 +318,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         <div class="col-auto">
                             <div class="header-logo">
                                 <a href="{{ url_for('index') }}">
-                                    <img src="{{ settings.get('logo_url', '/assets/images/logo.png') }}" alt="bti logo">
+                                    <img src="{{ url_for('static', filename='images/transparent-logo.webp', v=2) }}" alt="bti logo">
                                 </a>
                             </div>
                         </div>
@@ -369,359 +370,83 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!--==============================
 Hero Area
 ==============================-->
-<div  class="th-hero-wrapper hero-13" id="hero">
-	<div  class="slider-area hero-slider13">
-		<div class="swiper th-slider nm-swiper-wrapper" id="heroSlide13"
-			data-slider-options='{"effect":"fade", "autoplay":{"delay":15000,"disableOnInteraction":false}, "allowTouchMove": false, "simulateTouch": false}'>
-			<div class="swiper-wrapper">
-
-				<div class="swiper-slide">
-					<div class="th-hero-bg panorama-container" data-panorama-src="assets/images/panorama-slider-1.webp"
-						data-overlay="theme" data-opacity="6"></div>
-					<div class="container h-100">
-						<div class="hero-style13 text-center nm-hero-style">
-							<h2 class="hero-title text-white fw-100" data-aos="zoom-in" data-aos-duration="1000">
-								<span class="title" data-ani="slideinup" data-ani-delay="0.3s">
-									Making homeownership a <span class="text-theme2">joyful experience</span> </span>
-							</h2>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="th-hero-bg panorama-container" data-panorama-src="assets/images/panorama-slider-2.webp"
-						data-overlay="theme" data-opacity="6"></div>
-					<div class="container h-100">
-						<div class="hero-style13 text-center nm-hero-style">
-							<h2 class="hero-title text-white fw-100" data-aos="zoom-in" data-aos-duration="1000">
-								<span class="title" data-ani="slideinup" data-ani-delay="0.3s">
-									To provide viable housing solutions to <span class="text-theme2">every segment of our society</span> </span>
-							</h2>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="th-hero-bg panorama-container" data-panorama-src="assets/images/panorama-slider-3.webp"
-						data-overlay="theme" data-opacity="6"></div>
-					<div class="container h-100">
-						<div class="hero-style13 text-center nm-hero-style">
-							<h2 class="hero-title text-white fw-100" data-aos="zoom-in" data-aos-duration="1000">
-								<span class="title" data-ani="slideinup" data-ani-delay="0.3s">
-									43 <span class="text-theme2">years of excellence</span> </span>
-							</h2>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="th-hero-bg panorama-container" data-panorama-src="assets/images/panorama-slider-4.webp"
-						data-overlay="theme" data-opacity="6"></div>
-					<div class="container h-100">
-						<div class="hero-style13 text-center nm-hero-style">
-							<h2 class="hero-title text-white fw-100" data-aos="zoom-in" data-aos-duration="1000">
-								<span class="title" data-ani="slideinup" data-ani-delay="0.3s">
-									Transforming real estate <br>in <span class="text-theme2">Bangladesh</span> </span>
-							</h2>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<button data-slider-prev="#heroSlide13" class="slider-arrow style6 slider-prev"><img
-					src="assets/images/arrow-left.svg" alt=""></button>
-			<button data-slider-next="#heroSlide13" class="slider-arrow style6 slider-next"><img
-					src="assets/images/arrow-right.svg" alt=""></button>
-		</div>
-
-
-		<!-- <form class="property-search-form">
-
-			<div class="form-group">
-				<label>Property Search</label>
-
-			</div>
-
-			<div class="form-group">
-				<i class="fas fa-search"></i>
-				<input class="form-control" type="text" placeholder="Project Name">
-			</div>
-			<select class="form-select">
-				<option value="category" selected="selected">Status</option>
-				<option value="ready">Ready</option>
-				<option value="ongoing">Ongoing</option>
-				<option value="upcoming">Upcoming</option>
-				<option value="handedover">Handed Over</option>
-			</select>
-			<select class="form-select">
-				<option value="offer_type" selected="selected">Location</option>
-				<option value="popularity">Bashundhara</option>
-				<option value="rating">Gulshan</option>
-				<option value="date">Uttara</option>
-			</select>
-			<div class="form-group">
-				<a href="#"><i class="fas fa-microphone"></i></a>
-			</div>
-			<button class="th-btn" type="submit"><i class="fas fa-search"></i> Search</button>
-		</form> -->
-
-
-		    <form class="nm-project-search" role="search" method="get" action="index.html">
-        <input type="hidden" name="post_type" value="bti_properties">
-        <input type="hidden" name="s" value="">
-
-        <div class="d-flex justify-content-center align-items-baseline gap-4 flex-wrap">
-            	<div class="form-group nm-group nm-search-type-hidden">
-		<div class="nm-select-wrapper">
-			<select class="nm-menu" id="nmTypeVal" name="bti_type">
-				<option value="">Type</option>
-
-									
-						
-						<option value="classic" >
-							Classic						</option>
-
-					
-						
-						<option value="commercial" >
-							Commercial						</option>
-
-					
-						
-						<option value="critical" >
-							Critical						</option>
-
-					
-						
-						<option value="luxury" >
-							Luxury						</option>
-
-					
-						
-						<option value="offer-interior" >
-							Offer Interior						</option>
-
-					
-						
-						<option value="wellness-communities" >
-							Wellness Communities						</option>
-
-									
-			</select>
-			<i class="fa-solid fa-chevron-down nm-fa-caret"></i>
-		</div>
-	</div>
-	            	<div class="form-group nm-group">
-		<div class="nm-select-wrapper">
-			<select class="nm-menu" id="nmStatusVal" name="bti_status">
-				<option value="">Status</option>
-
-									
-						
-						<option value="ongoing" >
-							Ongoing						</option>
-
-					
-						
-						<option value="ready-to-move-in" >
-							Ready						</option>
-
-									
-			</select>
-			<i class="fa-solid fa-chevron-down nm-fa-caret"></i>
-		</div>
-	</div>
-	            	<div class="form-group nm-group">
-		<div class="nm-select-wrapper">
-			<select class="nm-menu" id="nmLocationVal" name="bti_location">
-				<option value="">Location</option>
-
-									
-						
-						<option value="adabor" >
-							Adabor						</option>
-
-					
-						
-						<option value="aftabnagar" >
-							Aftabnagar						</option>
-
-					
-						
-						<option value="bashundhara" >
-							Bashundhara R/A						</option>
-
-					
-						
-						
-						
-						
-						
-						
-						
-						
-						<option value="dhaka" >
-							Dhaka						</option>
-
-					
-						
-						<option value="dhanmondi" >
-							Dhanmondi						</option>
-
-					
-						
-						<option value="ecb-circle" >
-							ECB Circle						</option>
-
-					
-						
-						<option value="gulshan" >
-							Gulshan						</option>
-
-					
-						
-						<option value="jalalabad" >
-							Jalalabad						</option>
-
-					
-						
-						<option value="lalkhanbazar" >
-							Lalkhanbazar						</option>
-
-					
-						
-						<option value="mirpur" >
-							Mirpur						</option>
-
-					
-						
-						<option value="moghbazar" >
-							Moghbazar						</option>
-
-					
-						
-						<option value="mohakhali" >
-							Mohakhali						</option>
-
-					
-						
-						<option value="north-khulshi" >
-							North Khulshi						</option>
-
-					
-						
-						<option value="uttara" >
-							Uttara						</option>
-
-									
-			</select>
-			<i class="fa-solid fa-chevron-down nm-fa-caret"></i>
-		</div>
-	</div>
-	
-            <div class="form-group">
-                <a href="#" class="nm-voice-search-hidden" aria-label="Voice search" style="display:none;"><i class="fas fa-microphone"></i></a>
-                <button class="th-btn ml-3 nm-search-form-sbt-btn" type="submit">
-                    <i class="fas fa-search"></i> Search
-                </button>
+<div class="modern-hero-section" style="position: relative; height: 100vh; width: 100%; overflow: hidden;">
+    <div class="hero-bg-image animate-zoom-slow" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/images/panorama-slider-4.webp') no-repeat center center/cover; z-index: 1;"></div>
+    <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(10,14,20,0.4) 0%, rgba(10,14,20,0.8) 100%); z-index: 2;"></div>
+    
+    <div class="container h-100 position-relative" style="z-index: 3;">
+        <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center">
+            <h1 class="display-3 text-white fw-bold mb-4" data-aos="fade-up" data-aos-duration="1000" style="text-transform: uppercase; letter-spacing: 2px;">
+                Transforming Real Estate <br><span class="text-theme" style="color: #d4a843 !important;">In Bangladesh</span>
+            </h1>
+            <p class="lead text-light mb-5" data-aos="fade-up" data-aos-delay="200" style="max-width: 600px;">
+                Experience premium living with NDDL. We build more than just houses; we build your legacy.
+            </p>
+            
+            <!-- Modern Search Bar -->
+            <div class="modern-search-bar-wrapper w-100" data-aos="fade-up" data-aos-delay="400" style="max-width: 800px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50px; padding: 10px;">
+                <form class="d-flex flex-wrap flex-md-nowrap align-items-center gap-2" role="search" method="get" action="index.html">
+                    <div class="flex-grow-1">
+                        <select class="form-select bg-transparent border-0 text-light shadow-none" name="bti_type">
+                            <option value="" style="color:#000;">Property Type</option>
+                            <option value="luxury" style="color:#000;">Luxury</option>
+                            <option value="commercial" style="color:#000;">Commercial</option>
+                        </select>
+                    </div>
+                    <div class="text-light opacity-50 d-none d-md-block">|</div>
+                    <div class="flex-grow-1">
+                        <select class="form-select bg-transparent border-0 text-light shadow-none" name="bti_status">
+                            <option value="" style="color:#000;">Status</option>
+                            <option value="ongoing" style="color:#000;">Ongoing</option>
+                            <option value="ready-to-move-in" style="color:#000;">Ready</option>
+                        </select>
+                    </div>
+                    <div class="text-light opacity-50 d-none d-md-block">|</div>
+                    <div class="flex-grow-1">
+                        <select class="form-select bg-transparent border-0 text-light shadow-none" name="bti_location">
+                            <option value="" style="color:#000;">Location</option>
+                            <option value="gulshan" style="color:#000;">Gulshan</option>
+                            <option value="bashundhara" style="color:#000;">Bashundhara</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-theme rounded-pill px-4 py-2 fw-bold text-dark" type="submit" style="background-color: #d4a843;">
+                        <i class="fas fa-search me-2"></i> Search
+                    </button>
+                </form>
             </div>
         </div>
-    </form>
-    	</div>
+    </div>
 </div>
 
 <!--==============================
 About Area  
 ==============================-->
-<div  class="about-area-6 z-index-common position-relative" id="about-sec">
-	<div  class="container">
-		<div  class="row gx-80 justify-content-between">
-
-			<div class="col-xl-6 mb-50 mb-xl-0">
-				<div class="img-box6">
-					<div class="img1">
-						<img src="assets/images/Our-Legacy-1.webp" alt="img">
-					</div>
-					<div class="img2 d-none d-md-block jump">
-						<img src="assets/images/Our-Legacy-2.webp" alt="img">
-					</div>
-					<div class="about-tag">
-						<div class="about-experience-tag">
-							<span class="circle-title-anime text-light">43 years of excellence</span>
-						</div>
-						<a href="https://www.youtube.com/watch?v=zGP2vkMNUeI" class="play-btn popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-xl-6">
-				<div class="title-area mb-32">
-					<div class="nm-about-line"></div>
-					<h2 class="sec-title text-light" data-aos="fade-up">Our story</h2>
-					<p class="sec-text text-light">
-						<b>building technology & ideas ltd. (bti)</b> stands as one of the pioneers of Bangladesh’s real estate sector, raising standards of professionalism and integrity across the industry. With a legacy of on-time handovers, high quality of construction, and excellent designs, we have helped shape skylines and communities for over four decades. <br><br>
-
-						Our continuous dedication, depth of experience, and relentless pursuit of excellence have together earned us a position of strength and distinction in the market. Above all, we remain deeply humbled by the enduring trust and loyalty of our customers — a bond that has only grown stronger with time.
-					</p>
-				</div>
-			</div>
-
-
-			<!-- <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div> -->
-
-
-			<!-- <div class="nm-group">
-
-					<div class="dropdown w-100">
-						<input type="hidden" name="location" id="nmLocationVal">
-
-						<button class="nm-dd-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-target="#nmStatusVal">
-							<span class="nm-dd-text is-placeholder" data-role="text">Location</span>
-							<i class="fa-solid fa-chevron-down nm-fa-caret"></i>
-						</button>
-
-						<ul class="dropdown-menu nm-menu" style="margin: 0px;">
-							<li><a class="dropdown-item" href="#" data-value="Bashundhara">Bashundhara</a></li>
-								<li><a class="dropdown-item" href="#" data-value="Gulshan">Gulshan</a></li>
-								<li><a class="dropdown-item" href="#" data-value="Banani">Banani</a></li>
-								<li><a class="dropdown-item" href="#" data-value="Uttara">Uttara</a></li>
-						</ul>
-					</div>
-
-				</div> -->
-
-		</div>
-
-		<div  class="nm-marquee-section nm-marquee-section-alter nm-home-marquee-original-hidden">
-			<div  class="nm-marquee">
-				<div  class="nm-marquee-track">
-					<span class="nm-marquee-item" data-text="High Quality of Construction. Design Excellence. Reliability. Customer-centricity.">High Quality of Construction. Design Excellence. Reliability. Customer-centricity.</span>
-					<span class="nm-marquee-item" data-text="High Quality of Construction. Design Excellence. Reliability. Customer-centricity.">High Quality of Construction. Design Excellence. Reliability. Customer-centricity.</span>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-
-<div  class="nm-marquee-section nm-marquee-section-alter nm-marquee-between-sections">
-	<div class="nm-marquee">
-		<div class="nm-marquee-track">
-			<span class="nm-marquee-item" data-text="High Quality of Construction. Design Excellence. Reliability. Customer-centricity.">High Quality of Construction. Design Excellence. Reliability. Customer-centricity.</span>
-			<span class="nm-marquee-item" data-text="High Quality of Construction. Design Excellence. Reliability. Customer-centricity.">High Quality of Construction. Design Excellence. Reliability. Customer-centricity.</span>
-		</div>
-	</div>
-</div>
+<section class="modern-about-section py-5" id="about-sec" style="background-color: #0a0e14;">
+    <div class="container py-5">
+        <div class="row align-items-center gx-5">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                <div class="position-relative" style="overflow: hidden; border-radius: 0.5rem;">
+                    <img src="assets/images/Our-Legacy-1.webp" alt="Our Story" class="img-fluid rounded shadow-lg hover-lift animate-zoom-slow" style="border: 1px solid rgba(255, 255, 255, 0.1); width: 100%;">
+                    <div class="position-absolute bottom-0 end-0 p-4 bg-dark rounded shadow hover-lift" style="transform: translate(20%, 20%); border: 1px solid rgba(212, 168, 67, 0.3); z-index: 2;">
+                        <h3 class="text-theme mb-0" style="color: #d4a843 !important;">43+</h3>
+                        <p class="text-light mb-0">Years of Excellence</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <span class="text-theme fw-bold text-uppercase tracking-wider" style="color: #d4a843 !important; letter-spacing: 2px;">Our Story</span>
+                <h2 class="display-5 text-white fw-bold my-3">Building The Future<br>Restoring The Past</h2>
+                <p class="text-light opacity-75 mb-4" style="line-height: 1.8;">
+                    NextGen Design & Developers Ltd. stands as one of the pioneers of Bangladesh’s real estate sector, raising standards of professionalism and integrity across the industry. With a legacy of on-time handovers, high quality of construction, and excellent designs, we have helped shape skylines and communities for over four decades.
+                </p>
+                <p class="text-light opacity-75 mb-4" style="line-height: 1.8;">
+                    Our continuous dedication, depth of experience, and relentless pursuit of excellence have together earned us a position of strength and distinction in the market.
+                </p>
+                <a href="#" class="btn btn-outline-theme rounded-pill px-4 py-2 mt-2" style="border-color: #d4a843; color: #d4a843;">Discover More</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!--==============================
 Property Area 2  
@@ -1069,96 +794,62 @@ Portfolio Area
 <!--==============================
 	Footer Area
 ==============================-->
-<footer  class="footer-wrapper footer-layout5 footer-default">
-	<!-- <footer class="footer-wrapper footer-layout5 footer-default bg-black4"
-		data-bg-src="assets/images/footer-bg-6-1.png"> -->
-	<div class="container">
-		<div  class="footer-wrap space-top-half">
-			<div class="newsletter-wrap style5">
-				<h5 class="newsletter-title text-light">Subscribe to our newsletter to stay updated with the latest news from bti.</h5>
-				<form action="/" method="post" class="newsletter-form" id="btiFooterNewsletterForm">
-					<input type="hidden" id="bti_footer_newsletter_nonce" name="bti_footer_newsletter_nonce" value="08b96cd2f0" /><input type="hidden" name="_wp_http_referer" value="/" />					<input type="hidden" name="bti_footer_newsletter_form" value="1">
-					<div class="form-group">
-						<input type="email" class="form-control" id="btiFooterNewsletterEmail" name="bti_footer_newsletter_email" placeholder="Enter Email" required>
-					</div>
-					<button class="th-btn style5" type="submit">Subscribe now <i
-							class="far fa-paper-plane text-title"></i></button>
-				</form>
-							</div>
+<footer class="modern-footer-section position-relative" style="background-color: #05080c; border-top: 1px solid rgba(255,255,255,0.05); overflow: hidden; padding-top: 80px; padding-bottom: 30px;">
+    <!-- Abstract animated background shapes -->
+    <div class="footer-shape-1" style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(212,168,67,0.1) 0%, transparent 70%); z-index: 0; filter: blur(40px);"></div>
+    <div class="footer-shape-2" style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(40,60,90,0.2) 0%, transparent 70%); z-index: 0; filter: blur(50px);"></div>
 
+    <div class="container position-relative" style="z-index: 1;">
+        <div class="row gy-5 mb-5 align-items-center">
+            <!-- Brand Column -->
+            <div class="col-lg-4 text-center text-lg-start" data-aos="fade-up" data-aos-duration="1000">
+                <a href="{{ url_for('index') }}" class="d-inline-block mb-4 hover-lift">
+                    <img src="{{ url_for('static', filename='images/transparent-logo.webp', v=2) }}" alt="NDDL Logo" style="height: 100px; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));">
+                </a>
+                <p class="text-light opacity-75 mb-0" style="max-width: 300px; margin: 0 auto; line-height: 1.8;">
+                    Elevating the skyline of Bangladesh through premium real estate, exceptional design, and uncompromising quality.
+                </p>
+            </div>
 
-			<div class="widget-area">
-				<div class="row justify-content-center nm-footer-wrapper">
-					<!-- <div class="row"> -->
+            <!-- Quick Links -->
+            <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                <h5 class="text-white text-uppercase tracking-wider mb-4" style="color: #d4a843 !important; letter-spacing: 2px;">Explore</h5>
+                <ul class="list-unstyled mb-0 d-flex flex-wrap justify-content-center gap-4">
+                    <li><a href="{{ url_for('properties') }}" class="footer-link hover-lift d-inline-block text-light text-decoration-none">Properties</a></li>
+                    <li><a href="#" class="footer-link hover-lift d-inline-block text-light text-decoration-none">Our Story</a></li>
+                    <li><a href="#" class="footer-link hover-lift d-inline-block text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
 
-					<!-- <div class="col-auto"> -->
-					<!-- 
-					<div class="about-logo text-center">
-						<a href="{{ url_for('index') }}"><img src="assets/images/logo.png"
-								alt="Footer Logo"></a>
-					</div> -->
+            <!-- Social & Address -->
+            <div class="col-lg-4 text-center text-lg-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <h5 class="text-white text-uppercase tracking-wider mb-4" style="color: #d4a843 !important; letter-spacing: 2px;">Connect</h5>
+                <div class="social-icons mb-4 d-flex justify-content-center justify-content-lg-end gap-3">
+                    <a href="#" class="social-btn hover-lift text-light" style="width: 45px; height: 45px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn hover-lift text-light" style="width: 45px; height: 45px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn hover-lift text-light" style="width: 45px; height: 45px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%;"><i class="fab fa-instagram"></i></a>
+                </div>
+                <small class="text-light opacity-50 d-block">
+                    {{ settings.footer_address or 'Plot: 3 & 5, Road: 113/A, Gulshan-2, Dhaka' }}
+                </small>
+            </div>
+        </div>
 
-					<div class="footer-links text-center">
-						<ul class="">
-                                                        <li><a href="{{ settings.footer_blog_url or 'https://btibd.com/blog/' }}">Blog</a></li>
-                            <li><a href="{{ settings.footer_newsletter_url or 'https://btibd.com/newsletter/' }}">Newsletter</a></li>
-                            <li><a href="{{ settings.footer_gallery_url or 'https://btibd.com/gallery/' }}">Gallery</a></li>
-                            <li><a href="{{ settings.footer_handed_over_url or 'https://btibd.com/handed-over-projects/' }}">Handed over projects</a></li>
-                            <li><a href="{{ settings.footer_video_url or 'https://www.youtube.com/c/btibuildingtechnologyideasltd' }}" target="_blank" rel="noopener">Video</a></li>
-                            <li><a href="{{ settings.footer_career_url or 'https://btibd.com/career/' }}">Career</a></li>
-                            <li><a href="{{ settings.footer_privacy_url or 'https://btibd.com/privacy-policy/' }}">Privacy policy</a></li>
-                        </ul>
-					</div>
+        <hr class="border-secondary opacity-25 my-4">
 
-										<div class="details text-center">
-						<small class="text-light mb-0">{{ settings.footer_address or 'bti Celebration Point, Plot: 3 & 5, Road: 113/A, Gulshan-2, Dhaka-1212' }}</small>
-					</div>
-
-					<!-- <div class="th-widget-contact d-none d-xl-flex justify-content-center">
-						<div class="info-box_text d-flex align-items-center"> -->
-					<!-- <div class="icon"><img src="assets/images/location-dot.svg" alt="img"></div> -->
-					<!-- <div class="details">
-								<p>bti Celebration Point, Plot: 3 & 5, Road: 113/A, Gulshan-2, Dhaka-1212</p>
-							</div>
-						</div> -->
-					<!-- <div class="info-box_text d-flex align-items-center">
-							<div class="icon">
-								<img src="assets/images/phone.svg" alt="img">
-							</div>
-							<div class="details">
-								<p><a href="tel:+0123456789" class="info-box_link">+01 234 567 890</a></p>
-							</div>
-						</div>
-						<div class="info-box_text d-flex align-items-center">
-							<div class="icon">
-								<img src="assets/images/envelope.svg" alt="img">
-							</div>
-							<div class="details">
-								<p><a href="mailto:mailinfo00@bti.com" class="info-box_link">mailinfo00@bti.com</a>
-								</p>
-							</div>
-						</div> -->
-					<!-- </div> -->
-
-					<div class="th-social style5 text-center">
-						<a href="https://www.facebook.com/btibd/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-						<a href="https://www.linkedin.com/company/btibd" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-						<a href="https://www.instagram.com/btibd" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-						<a href="https://www.youtube.com/c/btibuildingtechnologyideasltd" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
-					</div>
-
-										<div class="copyright-wrap bg-theme">
-						<p class="copyright-text text-center">
-							{{ settings.copyright_text | safe if settings.copyright_text else 'Copyright <i class="fa-solid fa-copyright"></i> 2026 <a href="' + url_for('index') + '">bti</a>, All rights reserved.' | safe }}</p>
-					</div>
-
-					<!-- </div> -->
-
-				</div>
-
-			</div>
-		</div>
-	</div>
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" data-aos="fade-right">
+                <p class="text-light opacity-50 mb-0 small">
+                    {{ settings.copyright_text | safe if settings.copyright_text else '&copy; 2026 NextGen Design & Developers Ltd. All rights reserved.' | safe }}
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end" data-aos="fade-left">
+                <p class="text-light opacity-50 mb-0 small">
+                    Designed with <i class="fas fa-heart text-danger"></i> in Bangladesh
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <!--********************************
