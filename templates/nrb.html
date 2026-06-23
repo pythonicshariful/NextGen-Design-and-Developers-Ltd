@@ -49,7 +49,7 @@
 <meta name="twitter:data1" content="fida02" />
 <meta name="twitter:label2" content="Time to read" />
 <meta name="twitter:data2" content="18 minutes" />
-<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"index.html#organization","name":"Building Technology &amp; Ideas Ltd","url":"https://btibd.com","sameAs":["https://www.facebook.com/btibd"],"email":"info@btibd.com","logo":{"@type":"ImageObject","@id":"index.html#logo","url":"https://btibd.comassets/images/logo-without-text-751009.svg","contentUrl":"https://btibd.comassets/images/logo-without-text-751009.svg","caption":"Building Technology &amp; Ideas Ltd","inLanguage":"en-US","width":"270","height":"303"},"contactPoint":[{"@type":"ContactPoint","telephone":"16604","contactType":"customer support"}]},{"@type":"WebSite","@id":"index.html#website","url":"https://btibd.com","name":"Building Technology &amp; Ideas Ltd","publisher":{"@id":"index.html#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"index.html?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"bti - A Leading Real Estate Developer Company in Bangladesh","datePublished":"2020-03-19T13:22:55+06:00","dateModified":"2026-02-23T10:33:49+06:00","about":{"@id":"index.html#organization"},"isPartOf":{"@id":"index.html#website"},"inLanguage":"en-US"},{"@type":"Person","@id":"index.html#author","name":"fida02","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/f04a2557090ccd75ac06fbc7c720693fd2901924ecf5e64cbe19623dd74b5dc8?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/f04a2557090ccd75ac06fbc7c720693fd2901924ecf5e64cbe19623dd74b5dc8?s=96&amp;d=mm&amp;r=g","caption":"fida02","inLanguage":"en-US"},"worksFor":{"@id":"index.html#organization"}},{"@type":"BlogPosting","headline":"bti - A Leading Real Estate Developer Company in Bangladesh","keywords":"Real estate developer company","datePublished":"2020-03-19T13:22:55+06:00","dateModified":"2026-02-23T10:33:49+06:00","author":{"@id":"index.html#author","name":"fida02"},"publisher":{"@id":"index.html#organization"},"description":"Being a leading real estate company, bti pursues excellence in high-quality property development and offers functional flats for sale in Dhaka and Chattogram.","name":"bti - A Leading Real Estate Developer Company in Bangladesh","@id":"index.html#richSnippet","isPartOf":{"@id":"index.html#webpage"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"index.html#webpage"}}]}</script>
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"index.html#organization","name":"Building Technology &amp; Ideas Ltd","url":"https://btibd.com","sameAs":["https://www.facebook.com/btibd"],"email":"info@btibd.com","logo":{"@type":"ImageObject","@id":"index.html#logo","url":"https://btibd.comassets/images/logo.png","contentUrl":"https://btibd.comassets/images/logo.png","caption":"Building Technology &amp; Ideas Ltd","inLanguage":"en-US","width":"270","height":"303"},"contactPoint":[{"@type":"ContactPoint","telephone":"16604","contactType":"customer support"}]},{"@type":"WebSite","@id":"index.html#website","url":"https://btibd.com","name":"Building Technology &amp; Ideas Ltd","publisher":{"@id":"index.html#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"index.html?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"bti - A Leading Real Estate Developer Company in Bangladesh","datePublished":"2020-03-19T13:22:55+06:00","dateModified":"2026-02-23T10:33:49+06:00","about":{"@id":"index.html#organization"},"isPartOf":{"@id":"index.html#website"},"inLanguage":"en-US"},{"@type":"Person","@id":"index.html#author","name":"fida02","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/f04a2557090ccd75ac06fbc7c720693fd2901924ecf5e64cbe19623dd74b5dc8?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/f04a2557090ccd75ac06fbc7c720693fd2901924ecf5e64cbe19623dd74b5dc8?s=96&amp;d=mm&amp;r=g","caption":"fida02","inLanguage":"en-US"},"worksFor":{"@id":"index.html#organization"}},{"@type":"BlogPosting","headline":"bti - A Leading Real Estate Developer Company in Bangladesh","keywords":"Real estate developer company","datePublished":"2020-03-19T13:22:55+06:00","dateModified":"2026-02-23T10:33:49+06:00","author":{"@id":"index.html#author","name":"fida02"},"publisher":{"@id":"index.html#organization"},"description":"Being a leading real estate company, bti pursues excellence in high-quality property development and offers functional flats for sale in Dhaka and Chattogram.","name":"bti - A Leading Real Estate Developer Company in Bangladesh","@id":"index.html#richSnippet","isPartOf":{"@id":"index.html#webpage"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"index.html#webpage"}}]}</script>
 <!-- /Rank Math WordPress SEO plugin -->
 
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -188,6 +188,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   fbq('track','PageView');
 </script>
 {%- endif %}
+
+    <!-- AOS & Custom UI -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-ui.css') }}">
+
 </head>
 
 <!-- <body <php body_class( 'bg-theme' ); ?>> -->
@@ -201,7 +206,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <button class="th-menu-toggle"><i class="fa-solid fa-times"></i></button>
             <!-- <div class="mobile-logo"> -->
                 <!-- <a href="{{ url_for('index') }}">
-                    <img src="{{ settings.get('logo_url', '/assets/images/logo.svg') }}" alt="Side menu logo">
+                    <img src="{{ settings.get('logo_url', '/assets/images/logo.png') }}" alt="Side menu logo">
                 </a> -->
             <!-- </div> -->
             <div  class="th-mobile-menu">
@@ -274,7 +279,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <!-- <div class="widget  ">
                 <div class="th-widget-about">
                     <div class="about-logo">
-                        <a href="{{ url_for('index') }}"><img src="{{ settings.get('logo_url', '/assets/images/logo.svg') }}"
+                        <a href="{{ url_for('index') }}"><img src="{{ settings.get('logo_url', '/assets/images/logo.png') }}"
                                 alt="Side menu logo"></a>
                     </div>
                     <p class="about-text text-light"> Rapidiously myocardinate cross-platform intellectual capital
@@ -356,7 +361,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         <div class="col-auto">
                             <div class="header-logo">
                                 <a href="{{ url_for('index') }}">
-                                    <img src="{{ settings.get('logo_url', '/assets/images/logo.svg') }}" alt="bti logo">
+                                    <img src="{{ settings.get('logo_url', '/assets/images/logo.png') }}" alt="bti logo">
                                 </a>
                             </div>
                         </div>
@@ -439,8 +444,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         <div  class="container">
             <div class="row justify-content-between align-items-end mb-5">
                 <div class="col-lg-7">
-                    <span class="sub-title">We offer</span>
-                    <h2 class="sec-title">Complete real estate solutions for NRBs</h2>
+                    <span class="sub-title" data-aos="fade-up" data-aos-delay="100">We offer</span>
+                    <h2 class="sec-title" data-aos="fade-up">Complete real estate solutions for NRBs</h2>
                 </div>
                 <div class="col-lg-12">
                     <p class="mb-0 text-note">Choose the support you need, from finding a home to developing land, managing property, or designing interiors.</p>
@@ -497,8 +502,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         <div  class="container">
             <div class="row gy-5 align-items-center">
                 <div class="col-xl-5">
-                    <span class="sub-title">What makes us unique?</span>
-                    <h2 class="sec-title mb-4">High Quality of Construction. Design Excellence. Reliability.  Customer-centricity. </h2>
+                    <span class="sub-title" data-aos="fade-up" data-aos-delay="100">What makes us unique?</span>
+                    <h2 class="sec-title mb-4" data-aos="fade-up">High Quality of Construction. Design Excellence. Reliability.  Customer-centricity. </h2>
                     <p>NRBs need clarity, trust, and easy communication. bti brings multiple real estate services under one reliable platform so your property decision feels secure and manageable.</p>
                 </div>
                 <div class="col-xl-7">
@@ -531,8 +536,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <div class="contact-wrap">
                 <div class="row gy-5 align-items-center position-relative">
                     <div class="col-lg-6">
-                        <span class="sub-title">Call for details</span>
-                        <h2 class="sec-title mb-4">Find the right NRB service</h2>
+                        <span class="sub-title" data-aos="fade-up" data-aos-delay="100">Call for details</span>
+                        <h2 class="sec-title mb-4" data-aos="fade-up">Find the right NRB service</h2>
                         <p>Talk to bti for support with buying, developing, maintaining, securing, or designing your property in Bangladesh.</p>
                         <div class="mt-4">
                             <a class="contact-info-card" href="tel:16604"><i class="fa-solid fa-phone"></i><div><strong>16604</strong><br><span>Call bti for details</span></div></a>
@@ -593,7 +598,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					<!-- <div class="col-auto"> -->
 					<!-- 
 					<div class="about-logo text-center">
-						<a href="{{ url_for('index') }}"><img src="assets/images/logo-without-text-inverse.svg"
+						<a href="{{ url_for('index') }}"><img src="assets/images/logo.png"
 								alt="Footer Logo"></a>
 					</div> -->
 
@@ -936,6 +941,18 @@ var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?
         });
         </script>
         <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"d29c22409fbd4587adf4e78a59e2a160","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    </script>
+
 </body>
 
 </html>

@@ -120,7 +120,7 @@ def _seed_defaults():
     defaults = {
         'site_name':      'NextGen Design & Developers Ltd',
         'site_tagline':   'A Leading Real Estate Developer',
-        'logo_url':       '/assets/images/logo.svg',
+        'logo_url':       '/assets/images/logo.png',
         'favicon_url':    '/assets/images/fav.png',
         'phone':          '+880 1234-567890',
         'email':          'info@nddl.com',

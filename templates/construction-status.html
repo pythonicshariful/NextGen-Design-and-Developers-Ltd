@@ -49,7 +49,7 @@
 <meta name="twitter:data1" content="fida02" />
 <meta name="twitter:label2" content="Time to read" />
 <meta name="twitter:data2" content="18 minutes" />
-<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"index.html#organization","name":"Building Technology &amp; Ideas Ltd","url":"https://btibd.com","sameAs":["https://www.facebook.com/btibd"],"email":"info@btibd.com","logo":{"@type":"ImageObject","@id":"index.html#logo","url":"https://btibd.comassets/images/logo-without-text-751009.svg","contentUrl":"https://btibd.comassets/images/logo-without-text-751009.svg","caption":"Building Technology &amp; Ideas Ltd","inLanguage":"en-US","width":"270","height":"303"},"contactPoint":[{"@type":"ContactPoint","telephone":"16604","contactType":"customer support"}]},{"@type":"WebSite","@id":"index.html#website","url":"https://btibd.com","name":"Building Technology &amp; Ideas Ltd","publisher":{"@id":"index.html#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"index.html?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"bti - A Leading Real Estate Developer Company in Bangladesh","datePublished":"2020-03-19T13:22:55+06:00","dateModified":"2026-02-23T10:33:49+06:00","about":{"@id":"index.html#organization"},"isPartOf":{"@id":"index.html#website"},"inLanguage":"en-US"},{"@type":"Person","@id":"index.html#author","name":"fida02","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/f04a2557090ccd75ac06fbc7c720693fd2901924ecf5e64cbe19623dd74b5dc8?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/f04a2557090ccd75ac06fbc7c720693fd2901924ecf5e64cbe19623dd74b5dc8?s=96&amp;d=mm&amp;r=g","caption":"fida02","inLanguage":"en-US"},"worksFor":{"@id":"index.html#organization"}},{"@type":"BlogPosting","headline":"bti - A Leading Real Estate Developer Company in Bangladesh","keywords":"Real estate developer company","datePublished":"2020-03-19T13:22:55+06:00","dateModified":"2026-02-23T10:33:49+06:00","author":{"@id":"index.html#author","name":"fida02"},"publisher":{"@id":"index.html#organization"},"description":"Being a leading real estate company, bti pursues excellence in high-quality property development and offers functional flats for sale in Dhaka and Chattogram.","name":"bti - A Leading Real Estate Developer Company in Bangladesh","@id":"index.html#richSnippet","isPartOf":{"@id":"index.html#webpage"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"index.html#webpage"}}]}</script>
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"index.html#organization","name":"Building Technology &amp; Ideas Ltd","url":"https://btibd.com","sameAs":["https://www.facebook.com/btibd"],"email":"info@btibd.com","logo":{"@type":"ImageObject","@id":"index.html#logo","url":"https://btibd.comassets/images/logo.png","contentUrl":"https://btibd.comassets/images/logo.png","caption":"Building Technology &amp; Ideas Ltd","inLanguage":"en-US","width":"270","height":"303"},"contactPoint":[{"@type":"ContactPoint","telephone":"16604","contactType":"customer support"}]},{"@type":"WebSite","@id":"index.html#website","url":"https://btibd.com","name":"Building Technology &amp; Ideas Ltd","publisher":{"@id":"index.html#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"index.html?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"bti - A Leading Real Estate Developer Company in Bangladesh","datePublished":"2020-03-19T13:22:55+06:00","dateModified":"2026-02-23T10:33:49+06:00","about":{"@id":"index.html#organization"},"isPartOf":{"@id":"index.html#website"},"inLanguage":"en-US"},{"@type":"Person","@id":"index.html#author","name":"fida02","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/f04a2557090ccd75ac06fbc7c720693fd2901924ecf5e64cbe19623dd74b5dc8?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/f04a2557090ccd75ac06fbc7c720693fd2901924ecf5e64cbe19623dd74b5dc8?s=96&amp;d=mm&amp;r=g","caption":"fida02","inLanguage":"en-US"},"worksFor":{"@id":"index.html#organization"}},{"@type":"BlogPosting","headline":"bti - A Leading Real Estate Developer Company in Bangladesh","keywords":"Real estate developer company","datePublished":"2020-03-19T13:22:55+06:00","dateModified":"2026-02-23T10:33:49+06:00","author":{"@id":"index.html#author","name":"fida02"},"publisher":{"@id":"index.html#organization"},"description":"Being a leading real estate company, bti pursues excellence in high-quality property development and offers functional flats for sale in Dhaka and Chattogram.","name":"bti - A Leading Real Estate Developer Company in Bangladesh","@id":"index.html#richSnippet","isPartOf":{"@id":"index.html#webpage"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"index.html#webpage"}}]}</script>
 <!-- /Rank Math WordPress SEO plugin -->
 
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -187,6 +187,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   fbq('track','PageView');
 </script>
 {%- endif %}
+
+    <!-- AOS & Custom UI -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-ui.css') }}">
+
 </head>
 
 <!-- <body <php body_class( 'bg-theme' ); ?>> -->
@@ -200,7 +205,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <button class="th-menu-toggle"><i class="fa-solid fa-times"></i></button>
             <!-- <div class="mobile-logo"> -->
                 <!-- <a href="{{ url_for('index') }}">
-                    <img src="{{ settings.get('logo_url', '/assets/images/logo.svg') }}" alt="Side menu logo">
+                    <img src="{{ settings.get('logo_url', '/assets/images/logo.png') }}" alt="Side menu logo">
                 </a> -->
             <!-- </div> -->
             <div  class="th-mobile-menu">
@@ -273,7 +278,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <!-- <div class="widget  ">
                 <div class="th-widget-about">
                     <div class="about-logo">
-                        <a href="{{ url_for('index') }}"><img src="{{ settings.get('logo_url', '/assets/images/logo.svg') }}"
+                        <a href="{{ url_for('index') }}"><img src="{{ settings.get('logo_url', '/assets/images/logo.png') }}"
                                 alt="Side menu logo"></a>
                     </div>
                     <p class="about-text text-light"> Rapidiously myocardinate cross-platform intellectual capital
@@ -355,7 +360,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         <div class="col-auto">
                             <div class="header-logo">
                                 <a href="{{ url_for('index') }}">
-                                    <img src="{{ settings.get('logo_url', '/assets/images/logo.svg') }}" alt="bti logo">
+                                    <img src="{{ settings.get('logo_url', '/assets/images/logo.png') }}" alt="bti logo">
                                 </a>
                             </div>
                         </div>
@@ -410,7 +415,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         <div  class="container">
             <div class="hero-grid">
                 <div class="hero-copy">
-                    <h1 class="sec-title">Construction status</h1>
+                    <h1 class="sec-title" data-aos="fade-up">Construction status</h1>
                     <p>Explore the latest construction progress updates for bti projects across luxury, classic, wellness, and commercial collections.</p>
                     <div class="property-count"><i class="fa-solid fa-building"></i> Total 73 properties</div>
                 </div>
@@ -446,7 +451,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <div class="project-grid" id="projectGrid">
                                                                                     <a class="project-card" href="https://btibd.com/construction-status/beverly-residence/" data-category="luxury" data-title="Beverly Residence">
                             <div class="project-image">
-                                <img src="assets/images/beverly-residence-140231.webp" alt="Beverly Residence" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/beverly-residence-140231.webp" alt="Beverly Residence" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Beverly Residence</h3>
@@ -455,7 +460,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/moondrift-manor/" data-category="luxury" data-title="Moondrift Manor">
                             <div class="project-image">
-                                <img src="assets/images/moondrift-manor-706891.webp" alt="Moondrift Manor" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/moondrift-manor-706891.webp" alt="Moondrift Manor" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Moondrift Manor</h3>
@@ -464,7 +469,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/west-gate/" data-category="luxury" data-title="West Gate">
                             <div class="project-image">
-                                <img src="assets/images/west-gate-893880.webp" alt="West Gate" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/west-gate-893880.webp" alt="West Gate" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>West Gate</h3>
@@ -473,7 +478,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/amabilia/" data-category="luxury" data-title="Amabilia">
                             <div class="project-image">
-                                <img src="assets/images/amabilia-864152.jpg" alt="Amabilia" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/amabilia-864152.jpg" alt="Amabilia" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Amabilia</h3>
@@ -482,7 +487,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/magnifico/" data-category="luxury" data-title="Magnifico">
                             <div class="project-image">
-                                <img fetchpriority="high" src="assets/images/magnifico-248446-702x780.jpg" alt="Magnifico" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img fetchpriority="high" src="assets/images/magnifico-248446-702x780.jpg" alt="Magnifico" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Magnifico</h3>
@@ -491,7 +496,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/silvi/" data-category="luxury" data-title="Silvi">
                             <div class="project-image">
-                                <img src="assets/images/silvi-003341-702x780.jpg" alt="Silvi" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/silvi-003341-702x780.jpg" alt="Silvi" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Silvi</h3>
@@ -500,7 +505,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-santorini/" data-category="luxury" data-title="The Santorini">
                             <div class="project-image">
-                                <img src="assets/images/the-santorini-325484-702x780.jpg" alt="The Santorini" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-santorini-325484-702x780.jpg" alt="The Santorini" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Santorini</h3>
@@ -509,7 +514,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/aqualuna/" data-category="luxury" data-title="Aqualuna">
                             <div class="project-image">
-                                <img src="assets/images/aqualuna-723636-702x780.jpg" alt="Aqualuna" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/aqualuna-723636-702x780.jpg" alt="Aqualuna" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Aqualuna</h3>
@@ -518,7 +523,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/silver-creek/" data-category="luxury" data-title="Silver Creek">
                             <div class="project-image">
-                                <img src="assets/images/silver-creek-961378-702x780.jpg" alt="Silver Creek" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/silver-creek-961378-702x780.jpg" alt="Silver Creek" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Silver Creek</h3>
@@ -527,7 +532,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/park-royale/" data-category="luxury" data-title="Park Royale">
                             <div class="project-image">
-                                <img src="assets/images/park-royale-629337.jpg" alt="Park Royale" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/park-royale-629337.jpg" alt="Park Royale" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Park Royale</h3>
@@ -536,7 +541,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/moondift-manor/" data-category="classic" data-title="Moondift Manor">
                             <div class="project-image">
-                                <img src="assets/images/moondrift-manor-706891.webp" alt="Moondift Manor" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/moondrift-manor-706891.webp" alt="Moondift Manor" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Moondift Manor</h3>
@@ -545,7 +550,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/lobelia/" data-category="classic" data-title="Lobelia">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Lobelia" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Lobelia" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Lobelia</h3>
@@ -554,7 +559,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/westbrook/" data-category="classic" data-title="Westbrook">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Westbrook" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Westbrook" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Westbrook</h3>
@@ -563,7 +568,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/slate-wood/" data-category="classic" data-title="Slate Wood">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Slate Wood" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Slate Wood" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Slate Wood</h3>
@@ -572,7 +577,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/carina/" data-category="classic" data-title="Carina">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Carina" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Carina" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Carina</h3>
@@ -581,7 +586,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/euphoria/" data-category="classic" data-title="Euphoria">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Euphoria" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Euphoria" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Euphoria</h3>
@@ -590,7 +595,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/dreamscape/" data-category="classic" data-title="Dreamscape">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Dreamscape" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Dreamscape" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Dreamscape</h3>
@@ -599,7 +604,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/crown-manor/" data-category="classic" data-title="Crown Manor">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Crown Manor" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Crown Manor" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Crown Manor</h3>
@@ -608,7 +613,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/la-residencia/" data-category="classic" data-title="La Residencia">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="La Residencia" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="La Residencia" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>La Residencia</h3>
@@ -617,7 +622,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-seasons/" data-category="classic" data-title="The Seasons">
                             <div class="project-image">
-                                <img src="assets/images/the-seasons-436833.webp" alt="The Seasons" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-seasons-436833.webp" alt="The Seasons" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Seasons</h3>
@@ -626,7 +631,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/freedom/" data-category="classic" data-title="Freedom">
                             <div class="project-image">
-                                <img src="assets/images/freedom-144709.webp" alt="Freedom" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/freedom-144709.webp" alt="Freedom" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Freedom</h3>
@@ -635,7 +640,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/desiree/" data-category="classic" data-title="Desiree">
                             <div class="project-image">
-                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Desiree" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-849962-702x780.jpg" alt="Desiree" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Desiree</h3>
@@ -644,7 +649,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/allegra/" data-category="classic" data-title="Allegra">
                             <div class="project-image">
-                                <img src="assets/images/allegra-032824.webp" alt="Allegra" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/allegra-032824.webp" alt="Allegra" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Allegra</h3>
@@ -653,7 +658,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/urban-haven/" data-category="classic" data-title="Urban Haven">
                             <div class="project-image">
-                                <img src="assets/images/urban-haven-160114.webp" alt="Urban Haven" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/urban-haven-160114.webp" alt="Urban Haven" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Urban Haven</h3>
@@ -662,7 +667,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/jolie/" data-category="classic" data-title="Jolie">
                             <div class="project-image">
-                                <img src="assets/images/jolie-396631.webp" alt="Jolie" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/jolie-396631.webp" alt="Jolie" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Jolie</h3>
@@ -671,7 +676,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/south-serenity/" data-category="classic" data-title="South Serenity">
                             <div class="project-image">
-                                <img src="assets/images/south-serenity-831459.webp" alt="South Serenity" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/south-serenity-831459.webp" alt="South Serenity" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>South Serenity</h3>
@@ -680,7 +685,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/bliss/" data-category="classic" data-title="Bliss">
                             <div class="project-image">
-                                <img src="assets/images/bliss-784855.webp" alt="Bliss" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/bliss-784855.webp" alt="Bliss" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Bliss</h3>
@@ -689,7 +694,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/greenville-homes/" data-category="classic" data-title="Greenville Homes">
                             <div class="project-image">
-                                <img src="assets/images/greenville-homes-587050.webp" alt="Greenville Homes" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/greenville-homes-587050.webp" alt="Greenville Homes" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Greenville Homes</h3>
@@ -698,7 +703,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/emerald-height/" data-category="classic" data-title="Emerald Height">
                             <div class="project-image">
-                                <img src="assets/images/emerald-heights-677020.webp" alt="Emerald Height" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/emerald-heights-677020.webp" alt="Emerald Height" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Emerald Height</h3>
@@ -707,7 +712,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/dewdrops/" data-category="classic" data-title="Dewdrops">
                             <div class="project-image">
-                                <img src="assets/images/dew-drops-572904.webp" alt="Dewdrops" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/dew-drops-572904.webp" alt="Dewdrops" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Dewdrops</h3>
@@ -716,7 +721,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/sunny-hill/" data-category="classic" data-title="Sunny Hill">
                             <div class="project-image">
-                                <img src="assets/images/sunny-hill-582373.webp" alt="Sunny Hill" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/sunny-hill-582373.webp" alt="Sunny Hill" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Sunny Hill</h3>
@@ -725,7 +730,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/deja-vu/" data-category="classic" data-title="Deja Vu">
                             <div class="project-image">
-                                <img src="assets/images/deja-vu-148680.webp" alt="Deja Vu" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/deja-vu-148680.webp" alt="Deja Vu" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Deja Vu</h3>
@@ -734,7 +739,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/pleasant-homes/" data-category="classic" data-title="Pleasant Homes">
                             <div class="project-image">
-                                <img src="assets/images/pleasant-homes-108330.webp" alt="Pleasant Homes" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/pleasant-homes-108330.webp" alt="Pleasant Homes" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Pleasant Homes</h3>
@@ -743,7 +748,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/magenta/" data-category="classic" data-title="Magenta">
                             <div class="project-image">
-                                <img src="assets/images/magenta-069231.webp" alt="Magenta" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/magenta-069231.webp" alt="Magenta" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Magenta</h3>
@@ -752,7 +757,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/birchwood/" data-category="classic" data-title="Birchwood">
                             <div class="project-image">
-                                <img src="assets/images/birchwood-965019.webp" alt="Birchwood" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/birchwood-965019.webp" alt="Birchwood" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Birchwood</h3>
@@ -761,7 +766,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/familia/" data-category="classic" data-title="Familia">
                             <div class="project-image">
-                                <img src="assets/images/familia-181443.webp" alt="Familia" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/familia-181443.webp" alt="Familia" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Familia</h3>
@@ -770,7 +775,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/lakeside-serenade/" data-category="classic" data-title="Lakeside Serenade">
                             <div class="project-image">
-                                <img src="assets/images/lakeside-serenade-328158.webp" alt="Lakeside Serenade" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/lakeside-serenade-328158.webp" alt="Lakeside Serenade" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Lakeside Serenade</h3>
@@ -779,7 +784,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/avalon/" data-category="classic" data-title="Avalon">
                             <div class="project-image">
-                                <img src="assets/images/avalon-433835.webp" alt="Avalon" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/avalon-433835.webp" alt="Avalon" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Avalon</h3>
@@ -788,7 +793,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-lighthouse/" data-category="classic" data-title="The Lighthouse">
                             <div class="project-image">
-                                <img src="assets/images/the-lighthouse-845819.webp" alt="The Lighthouse" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-lighthouse-845819.webp" alt="The Lighthouse" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Lighthouse</h3>
@@ -797,7 +802,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/la-montana/" data-category="classic" data-title="La Montana">
                             <div class="project-image">
-                                <img src="assets/images/la-montana-199014.webp" alt="La Montana" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/la-montana-199014.webp" alt="La Montana" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>La Montana</h3>
@@ -806,7 +811,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/fortune-homes/" data-category="classic" data-title="Fortune Homes">
                             <div class="project-image">
-                                <img src="assets/images/fortune-homes-612716.webp" alt="Fortune Homes" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/fortune-homes-612716.webp" alt="Fortune Homes" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Fortune Homes</h3>
@@ -815,7 +820,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/decoris/" data-category="classic" data-title="Decoris">
                             <div class="project-image">
-                                <img src="assets/images/decoris-538199-702x780.jpg" alt="Decoris" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/decoris-538199-702x780.jpg" alt="Decoris" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Decoris</h3>
@@ -824,7 +829,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/domus/" data-category="classic" data-title="Domus">
                             <div class="project-image">
-                                <img src="assets/images/domus-048401-702x780.jpg" alt="Domus" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/domus-048401-702x780.jpg" alt="Domus" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Domus</h3>
@@ -833,7 +838,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/altus/" data-category="classic" data-title="Altus">
                             <div class="project-image">
-                                <img src="assets/images/altus-095896-702x780.jpg" alt="Altus" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/altus-095896-702x780.jpg" alt="Altus" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Altus</h3>
@@ -842,7 +847,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/adora/" data-category="classic" data-title="Adora">
                             <div class="project-image">
-                                <img src="assets/images/adora-574198-702x780.jpg" alt="Adora" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/adora-574198-702x780.jpg" alt="Adora" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Adora</h3>
@@ -851,7 +856,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/prime-view/" data-category="classic" data-title="Prime View">
                             <div class="project-image">
-                                <img src="assets/images/prime-view-145637-702x780.jpg" alt="Prime View" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/prime-view-145637-702x780.jpg" alt="Prime View" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Prime View</h3>
@@ -860,7 +865,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/chestnut/" data-category="classic" data-title="Chestnut">
                             <div class="project-image">
-                                <img src="assets/images/chestnut-069754.webp" alt="Chestnut" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/chestnut-069754.webp" alt="Chestnut" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Chestnut</h3>
@@ -869,7 +874,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/montrose/" data-category="classic" data-title="Montrose">
                             <div class="project-image">
-                                <img src="assets/images/montrose-223572.jpg" alt="Montrose" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/montrose-223572.jpg" alt="Montrose" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Montrose</h3>
@@ -878,7 +883,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/twinkle/" data-category="classic" data-title="Twinkle">
                             <div class="project-image">
-                                <img src="assets/images/twinkle-049431-702x780.jpg" alt="Twinkle" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/twinkle-049431-702x780.jpg" alt="Twinkle" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Twinkle</h3>
@@ -887,7 +892,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-laurels/" data-category="classic" data-title="The Laurels">
                             <div class="project-image">
-                                <img src="assets/images/the-laurels-999136-702x780.jpg" alt="The Laurels" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-laurels-999136-702x780.jpg" alt="The Laurels" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Laurels</h3>
@@ -896,7 +901,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/city-life/" data-category="classic" data-title="City Life">
                             <div class="project-image">
-                                <img src="assets/images/city-life-375063-702x780.jpg" alt="City Life" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/city-life-375063-702x780.jpg" alt="City Life" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>City Life</h3>
@@ -905,7 +910,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/northern-light/" data-category="classic" data-title="Northern Light">
                             <div class="project-image">
-                                <img src="assets/images/northern-light-043045-702x780.jpg" alt="Northern Light" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/northern-light-043045-702x780.jpg" alt="Northern Light" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Northern Light</h3>
@@ -914,7 +919,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/spring-field/" data-category="classic" data-title="Spring Field">
                             <div class="project-image">
-                                <img src="assets/images/spring-field-404907-702x780.jpg" alt="Spring Field" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/spring-field-404907-702x780.jpg" alt="Spring Field" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Spring Field</h3>
@@ -923,7 +928,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/meadow-view/" data-category="classic" data-title="Meadow View">
                             <div class="project-image">
-                                <img src="assets/images/meadow-view-504401-702x780.jpg" alt="Meadow View" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/meadow-view-504401-702x780.jpg" alt="Meadow View" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Meadow View</h3>
@@ -932,7 +937,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/montage/" data-category="classic" data-title="Montage">
                             <div class="project-image">
-                                <img src="assets/images/montage-210746-702x780.jpg" alt="Montage" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/montage-210746-702x780.jpg" alt="Montage" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Montage</h3>
@@ -941,7 +946,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/breezy-homes/" data-category="classic" data-title="Breezy Homes">
                             <div class="project-image">
-                                <img src="assets/images/breezy-homes-352081-702x780.jpg" alt="Breezy Homes" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/breezy-homes-352081-702x780.jpg" alt="Breezy Homes" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Breezy Homes</h3>
@@ -950,7 +955,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/gold-star/" data-category="classic" data-title="Gold Star">
                             <div class="project-image">
-                                <img src="assets/images/gold-star-649826-702x780.jpg" alt="Gold Star" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/gold-star-649826-702x780.jpg" alt="Gold Star" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Gold Star</h3>
@@ -959,7 +964,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-retreat/" data-category="classic" data-title="The Retreat">
                             <div class="project-image">
-                                <img src="assets/images/the-retreat-159069-702x780.jpg" alt="The Retreat" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-retreat-159069-702x780.jpg" alt="The Retreat" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Retreat</h3>
@@ -968,7 +973,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/happy-days/" data-category="classic" data-title="Happy Days">
                             <div class="project-image">
-                                <img src="assets/images/happy-days-509846-702x780.jpg" alt="Happy Days" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/happy-days-509846-702x780.jpg" alt="Happy Days" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Happy Days</h3>
@@ -977,7 +982,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-palms/" data-category="classic" data-title="The Palms">
                             <div class="project-image">
-                                <img src="assets/images/the-palm-278126-702x780.jpg" alt="The Palms" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-palm-278126-702x780.jpg" alt="The Palms" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Palms</h3>
@@ -986,7 +991,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-liberty/" data-category="classic" data-title="The Liberty">
                             <div class="project-image">
-                                <img src="assets/images/liberty-145765.jpg" alt="The Liberty" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/liberty-145765.jpg" alt="The Liberty" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Liberty</h3>
@@ -995,7 +1000,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/resonance/" data-category="classic" data-title="Resonance">
                             <div class="project-image">
-                                <img src="assets/images/resonance-407663.jpg" alt="Resonance" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/resonance-407663.jpg" alt="Resonance" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Resonance</h3>
@@ -1004,7 +1009,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/welcome-home/" data-category="classic" data-title="Welcome Home">
                             <div class="project-image">
-                                <img src="assets/images/welcome-home-460057-702x780.jpg" alt="Welcome Home" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/welcome-home-460057-702x780.jpg" alt="Welcome Home" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Welcome Home</h3>
@@ -1013,7 +1018,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/blue-ribbon-homes/" data-category="classic" data-title="Blue Ribbon Homes">
                             <div class="project-image">
-                                <img src="assets/images/blue-ribbon-homes-947944-702x780.jpg" alt="Blue Ribbon Homes" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/blue-ribbon-homes-947944-702x780.jpg" alt="Blue Ribbon Homes" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Blue Ribbon Homes</h3>
@@ -1022,7 +1027,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-peak/" data-category="wellness-communities" data-title="The Peak">
                             <div class="project-image">
-                                <img src="assets/images/the-peak-255001-702x780.jpg" alt="The Peak" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-peak-255001-702x780.jpg" alt="The Peak" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Peak</h3>
@@ -1031,7 +1036,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/city-pointe/" data-category="wellness-communities" data-title="City Pointe">
                             <div class="project-image">
-                                <img src="assets/images/city-pointe-328773.jpg" alt="City Pointe" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/city-pointe-328773.jpg" alt="City Pointe" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>City Pointe</h3>
@@ -1040,7 +1045,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-madison/" data-category="wellness-communities" data-title="The Madison">
                             <div class="project-image">
-                                <img src="assets/images/the-madison-690354-702x780.jpg" alt="The Madison" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-madison-690354-702x780.jpg" alt="The Madison" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Madison</h3>
@@ -1049,7 +1054,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/valencia/" data-category="wellness-communities" data-title="Valencia">
                             <div class="project-image">
-                                <img src="assets/images/valencia-930142-702x780.jpg" alt="Valencia" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/valencia-930142-702x780.jpg" alt="Valencia" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Valencia</h3>
@@ -1058,7 +1063,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/shopnoneer/" data-category="wellness-communities" data-title="Shopnoneer">
                             <div class="project-image">
-                                <img src="assets/images/shopnoneer-779575.jpg" alt="Shopnoneer" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/shopnoneer-779575.jpg" alt="Shopnoneer" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Shopnoneer</h3>
@@ -1067,7 +1072,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-millennial/" data-category="wellness-communities" data-title="The Millennial">
                             <div class="project-image">
-                                <img src="assets/images/the-millennial-645042-702x780.jpg" alt="The Millennial" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-millennial-645042-702x780.jpg" alt="The Millennial" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Millennial</h3>
@@ -1076,7 +1081,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/cosmopolis/" data-category="wellness-communities" data-title="Cosmopolis">
                             <div class="project-image">
-                                <img src="assets/images/cosmopolis-732794.jpg" alt="Cosmopolis" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/cosmopolis-732794.jpg" alt="Cosmopolis" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Cosmopolis</h3>
@@ -1085,7 +1090,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/royal-pines/" data-category="wellness-communities" data-title="Royal Pines">
                             <div class="project-image">
-                                <img src="assets/images/royal-pines-463545-702x780.jpg" alt="Royal Pines" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/royal-pines-463545-702x780.jpg" alt="Royal Pines" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>Royal Pines</h3>
@@ -1094,7 +1099,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         </a>
                                                                     <a class="project-card" href="https://btibd.com/construction-status/the-skyline/" data-category="commercial" data-title="The Skyline">
                             <div class="project-image">
-                                <img src="assets/images/the-skyline-548970-702x780.jpg" alt="The Skyline" onerror="this.src='assets/images/logo-without-text-inverse.svg';this.classList.add('image-fallback');">
+                                <img src="assets/images/the-skyline-548970-702x780.jpg" alt="The Skyline" onerror="this.src='assets/images/logo.png';this.classList.add('image-fallback');">
                             </div>
                             <div class="project-card-content">
                                 <h3>The Skyline</h3>
@@ -1190,7 +1195,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					<!-- <div class="col-auto"> -->
 					<!-- 
 					<div class="about-logo text-center">
-						<a href="{{ url_for('index') }}"><img src="assets/images/logo-without-text-inverse.svg"
+						<a href="{{ url_for('index') }}"><img src="assets/images/logo.png"
 								alt="Footer Logo"></a>
 					</div> -->
 
@@ -1533,6 +1538,18 @@ var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?
         });
         </script>
         <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"d29c22409fbd4587adf4e78a59e2a160","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    </script>
+
 </body>
 
 </html>

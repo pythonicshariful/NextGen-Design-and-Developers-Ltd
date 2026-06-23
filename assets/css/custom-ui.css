@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Custom UI Enhancements (Aesthetics, Micro-animations, Glassmorphism)
+   ========================================================================== */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base Transitions */
+a, button, .property-card4, .property-card-hover-wrap, .img-box, .btn, .th-btn {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Glassmorphism Elements */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.property-card-tag {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* Micro-Animations: Hover Effects */
+
+/* Property Cards Lift Effect */
+.property-card4 {
+    border-radius: 12px;
+    overflow: hidden;
+    will-change: transform;
+}
+.property-card4:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Image scaling on hover */
+.property-card4 .property-card-thumb img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.property-card4:hover .property-card-thumb img {
+    transform: scale(1.05);
+}
+
+/* Refined Meta content tags */
+.meta-content {
+    font-weight: 500;
+}
+
+/* Button sweeping shine effect */
+.th-btn, .btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.th-btn::after, .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: skewX(-20deg);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+.th-btn:hover::after, .btn:hover::after {
+    left: 150%;
+}
+
+/* Dark mode tweaks for aesthetics */
+body {
+    background-color: #4d565f; /* Logo background color */
+}
+
+/* Soft gradients for accent text */
+.text-gradient {
+    background: linear-gradient(90deg, #d4a843, #f5d061);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Enhance shadows on white boxes if any */
+.box-shadow-hover {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.box-shadow-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Make logo slightly rounded */
+.header-logo img,
+.mobile-logo img,
+.about-logo img {
+    border-radius: 12px;
+}

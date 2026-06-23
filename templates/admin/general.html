@@ -25,7 +25,7 @@
       <div class="form-row form-row-2">
         <!-- Logo -->
         <div class="form-group">
-          <label class="form-label">Logo <span>(upload or enter URL)</span></label>
+          <label class="form-label">Logo <span>(upload or enter URL, recommended: 250×60px)</span></label>
           {% if current.logo_url %}
             <img src="{{ current.logo_url }}" id="logo-preview" class="img-preview" style="display:block;margin-bottom:10px;max-height:50px;width:auto;object-fit:contain;background:#fff;padding:4px;border-radius:6px;"/>
           {% else %}
@@ -36,11 +36,11 @@
             <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
             <p>Click to upload logo <strong>or</strong></p>
           </label>
-          <input name="logo_url" type="text" class="form-control" value="{{ current.logo_url }}" placeholder="/assets/images/logo.svg" style="margin-top:8px;"/>
+          <input name="logo_url" type="text" class="form-control" value="{{ current.logo_url }}" placeholder="/assets/images/logo.png" style="margin-top:8px;"/>
         </div>
         <!-- Favicon -->
         <div class="form-group">
-          <label class="form-label">Favicon <span>(upload or enter URL)</span></label>
+          <label class="form-label">Favicon <span>(upload or enter URL, recommended: 1:1 ratio, e.g. 32×32px)</span></label>
           {% if current.favicon_url %}
             <img src="{{ current.favicon_url }}" id="fav-preview" class="img-preview" style="display:block;margin-bottom:10px;width:32px;height:32px;"/>
           {% else %}

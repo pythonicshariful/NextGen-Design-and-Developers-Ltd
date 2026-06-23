@@ -102,7 +102,7 @@
     <div class="card-body">
       <div class="form-row form-row-2">
         <div class="form-group">
-          <label class="form-label">Main Project Image</label>
+          <label class="form-label">Main Project Image <span style="font-weight:400;color:var(--muted);font-size:12px;">(recommended: 16:9 ratio, e.g. 800×450px)</span></label>
           {% if item and item.image_url %}
             <img src="{{ item.image_url }}" id="proj-img-preview" class="img-preview" style="display:block;width:200px;height:130px;margin-bottom:10px;border-radius:8px;object-fit:cover;"/>
           {% else %}
@@ -116,7 +116,7 @@
           <input name="image_url" type="text" class="form-control" value="{{ item.image_url if item else '' }}" placeholder="https://... or /assets/images/project.jpg"/>
         </div>
         <div class="form-group">
-          <label class="form-label">Logo Image <span style="font-weight:400;color:var(--muted);font-size:12px;">(shown on hover)</span></label>
+          <label class="form-label">Logo Image <span style="font-weight:400;color:var(--muted);font-size:12px;">(shown on hover, recommended: 150×80px)</span></label>
           {% if item and item.logo_url %}
             <img src="{{ item.logo_url }}" id="proj-logo-preview" class="img-preview" style="display:block;max-width:150px;max-height:80px;margin-bottom:10px;object-fit:contain;"/>
           {% else %}
